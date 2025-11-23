@@ -1,6 +1,10 @@
 FROM n8nio/n8n:latest
 
-WORKDIR /data
+USER root
+
+RUN apk add --no-cache tzdata
+
+USER node
 
 EXPOSE 5678
 
